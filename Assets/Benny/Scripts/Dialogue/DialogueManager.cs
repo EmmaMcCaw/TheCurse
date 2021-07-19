@@ -24,6 +24,9 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
+        GameObject.Find("PlayerFootsteps").GetComponent<AudioSource>().Stop();
+
+
         //interactText.text = "";
         nameText.enabled = true;
         dialogueText.enabled = true;

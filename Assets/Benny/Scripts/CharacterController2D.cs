@@ -48,13 +48,26 @@ public class CharacterController2D : MonoBehaviour
         if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)))
         {
             moveDirection = Input.GetKey(KeyCode.A) ? -1 : 1;
+
+
+            if (isGrounded && !GameObject.Find("PlayerFootsteps").GetComponent<AudioSource>().isPlaying)
+			{
+                GameObject.Find("PlayerFootsteps").GetComponent<AudioSource>().Play();
+            }
         }
         else
         {
             //if (isGrounded || r2d.velocity.magnitude < 0.01f)
             {
                 moveDirection = 0;
+                GameObject.Find("PlayerFootsteps").GetComponent<AudioSource>().Stop();
             }
+        }
+
+
+        if (!isGrounded)
+		{
+            GameObject.Find("PlayerFootsteps").GetComponent<AudioSource>().Stop();
         }
 
         // Change facing direction

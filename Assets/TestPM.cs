@@ -6,7 +6,7 @@ public class TestPM : MonoBehaviour
 {
     public float Speed = 20f;
     float horizontal;
-   // float vertical;
+    float vertical;
     public Rigidbody2D playerController;
     // Start is called before the first frame update
     void Start()
@@ -18,12 +18,12 @@ public class TestPM : MonoBehaviour
     void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
-        //vertical = Input.GetAxisRaw("Vertical");
+        vertical = Input.GetAxisRaw("Vertical");
     }
 
     private void FixedUpdate()
     {
-        //playerController.velocity = new Vector(horizontal * Speed, vertical * Speed);
+        playerController.velocity = new Vector2(horizontal * Speed, vertical * Speed);
     }
 
 }

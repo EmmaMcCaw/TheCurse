@@ -5,16 +5,18 @@ using UnityEngine.Audio;
 
 public class OrbPickUpSound : MonoBehaviour
 {
-    //public AudioSource Hum;
-     
+    public AudioSource Hum;
+    private bool collected = false;
 
     // Update is called once per frame
     void Update()
     {
-      if (Input.GetKey(KeyCode.Space))
+      if (Input.GetKey(KeyCode.Space)&& collected == false)
         {
-           // Hum.PlayOneShot(Hum);
+            // Hum.PlayOneShot(Hum);
+            Hum.Play();
             Destroy(gameObject, 3f);
+            collected = true;
         }
     }
 }

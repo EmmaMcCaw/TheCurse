@@ -59,7 +59,7 @@ public class CharacterController2D : MonoBehaviour
 			{
                 GameObject.Find("PlayerFootsteps").GetComponent<AudioSource>().Play();
                 _animator.SetBool("Grounded", true);
-                _animator.SetBool("Jumping", false);
+               // _animator.SetBool("Jumping", false);
             }
         }
         else
@@ -73,7 +73,7 @@ public class CharacterController2D : MonoBehaviour
                 if (isGrounded)
 				{
                     _animator.SetBool("Grounded", true);
-                    _animator.SetBool("Jumping", false);
+                  //  _animator.SetBool("Jumping", false);
                 }
             }
         }
@@ -82,7 +82,7 @@ public class CharacterController2D : MonoBehaviour
         if (!isGrounded)
 		{
             GameObject.Find("PlayerFootsteps").GetComponent<AudioSource>().Stop();
-            _animator.SetBool("Jumping", true);
+            //_animator.SetBool("Jumping", true);
         }
 
         // Change facing direction

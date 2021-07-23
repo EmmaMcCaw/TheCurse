@@ -23,7 +23,9 @@ public class CharacterController2D : MonoBehaviour
 
     public bool canTalk = false;
 
-    // Use this for initialization
+    private Animator _animator;
+
+
     void Start()
     {
         t = transform;
@@ -34,13 +36,15 @@ public class CharacterController2D : MonoBehaviour
         r2d.gravityScale = gravityScale;
         facingRight = t.localScale.x > 0;
 
+        _animator = GetComponent<Animator>();
+
         if (mainCamera)
         {
             cameraPos = mainCamera.transform.position;
         }
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         // Movement controls
@@ -48,19 +52,29 @@ public class CharacterController2D : MonoBehaviour
         if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)))
         {
             moveDirection = Input.GetKey(KeyCode.A) ? -1 : 1;
+            _animator.SetBool("Running", true);
 
 
             if (isGrounded && !GameObject.Find("PlayerFootsteps").GetComponent<AudioSource>().isPlaying)
 			{
                 GameObject.Find("PlayerFootsteps").GetComponent<AudioSource>().Play();
+                _animator.SetBool("Grounded", true);
+                _animator.SetBool("Jumping", false);
             }
         }
         else
         {
             //if (isGrounded || r2d.velocity.magnitude < 0.01f)
             {
+                _animator.SetBool("Running", false);
                 moveDirection = 0;
                 GameObject.Find("PlayerFootsteps").GetComponent<AudioSource>().Stop();
+
+                if (isGrounded)
+				{
+                    _animator.SetBool("Grounded", true);
+                    _animator.SetBool("Jumping", false);
+                }
             }
         }
 
@@ -68,6 +82,7 @@ public class CharacterController2D : MonoBehaviour
         if (!isGrounded)
 		{
             GameObject.Find("PlayerFootsteps").GetComponent<AudioSource>().Stop();
+            _animator.SetBool("Jumping", true);
         }
 
         // Change facing direction
@@ -89,6 +104,8 @@ public class CharacterController2D : MonoBehaviour
         if (Input.GetKey(KeyCode.W) && isGrounded)
         {
             r2d.velocity = new Vector2(r2d.velocity.x, jumpHeight);
+            _animator.SetBool("Jumping", true);
+            _animator.SetBool("Grounded", false);
         }
 
         // Camera follow

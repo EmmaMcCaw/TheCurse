@@ -47,6 +47,7 @@ public class CharacterController2D : MonoBehaviour
 
     void Update()
     {
+
         // Movement controls
         //if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) && (isGrounded || Mathf.Abs(r2d.velocity.x) > 0.01f))
         if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)))
@@ -101,12 +102,12 @@ public class CharacterController2D : MonoBehaviour
         }
 
         // Jumping
-        if (Input.GetKey(KeyCode.W) && isGrounded)
+        /*if (Input.GetKey(KeyCode.W) && isGrounded)
         {
             r2d.velocity = new Vector2(r2d.velocity.x, jumpHeight);
             _animator.SetBool("Jumping", true);
             _animator.SetBool("Grounded", false);
-        }
+        }*/
 
         // Camera follow
         if (mainCamera)
@@ -142,5 +143,9 @@ public class CharacterController2D : MonoBehaviour
         // Simple debug
         Debug.DrawLine(groundCheckPos, groundCheckPos - new Vector3(0, colliderRadius, 0), isGrounded ? Color.green : Color.red);
         Debug.DrawLine(groundCheckPos, groundCheckPos - new Vector3(colliderRadius, 0, 0), isGrounded ? Color.green : Color.red);
+
+
+        //
+        isGrounded = true;
     }
 }

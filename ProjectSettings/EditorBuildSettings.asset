@@ -4,5 +4,32 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Benny/Benny 2D Scene Copy/B1.0Village Scene 1.unity
+    guid: 1661395f058eeda4fa1eae22b4ce40cc
+  - enabled: 1
+    path: Assets/Benny/Benny 2D Scene Copy/B1.5HouseScene 1.unity
+    guid: c2a90df89dddfd447aa3b73d21689103
+  - enabled: 1
+    path: Assets/Benny/Benny 2D Scene Copy/B2RoadCaveScene.unity
+    guid: 185680096a7ae2046963c32ab95d61b9
+  - enabled: 1
+    path: Assets/Benny/Benny 2D Scene Copy/B3CaveScene.unity
+    guid: 5ec0c295a774a3a41b30e60a9f0ef976
+  - enabled: 1
+    path: Assets/Benny/Benny 2D Scene Copy/B4CursedVillageScene.unity
+    guid: 0252de13569f040488942f15fc08341b
+  - enabled: 1
+    path: Assets/Benny/Benny 2D Scene Copy/B5CaveCollapsedScene 1.unity
+    guid: 1b2ac397bb645034cbd8203a4f36febb
+  - enabled: 1
+    path: Assets/Benny/Benny 2D Scene Copy/B6PlayerBirdScene.unity
+    guid: 9137868e286223d4c98dfa677ddd4057
+  - enabled: 1
+    path: Assets/Benny/Benny 2D Scene Copy/B7VillageAfterCurse Scene.unity
+    guid: e0a08915e1be65340b6f29fdc63117f9
+  - enabled: 1
+    path: Assets/Benny/Benny 2D Scene Copy/B8FinalHouseScene.unity
+    guid: 01a26782a5794a74283a8f14f9ec6776
   m_configObjects: {}

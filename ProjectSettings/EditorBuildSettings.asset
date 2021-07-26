@@ -5,6 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: Assets/Benny/Benny 2D Scene Copy/MainMenu.unity
+    guid: 934ab2f625c07884ba95dd3ba7c49807
   - enabled: 1
     path: Assets/Benny/Benny 2D Scene Copy/B1.0Village Scene 1.unity
     guid: 1661395f058eeda4fa1eae22b4ce40cc
@@ -29,7 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Benny/Benny 2D Scene Copy/B7VillageAfterCurse Scene.unity
     guid: e0a08915e1be65340b6f29fdc63117f9
-  - enabled: 1
+  - enabled: 0
     path: Assets/Benny/Benny 2D Scene Copy/B8FinalHouseScene.unity
     guid: 01a26782a5794a74283a8f14f9ec6776
   m_configObjects: {}

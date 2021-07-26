@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,9 +6,9 @@ using TMPro;
 
 // This is where characters dialogue goes in the inspector
 
-public class DialogueTrigger : MonoBehaviour
+public class DialogueBird : MonoBehaviour
 {
-	private GameObject nameText;
+    private GameObject nameText;
     private GameObject dialogueText;
     private GameObject dialogueBox;
     private GameObject player;
@@ -22,7 +22,7 @@ public class DialogueTrigger : MonoBehaviour
 
 
     private void Start()
-	{
+    {
         interactText = GameObject.Find("InteractText").GetComponent<TextMeshProUGUI>();
         TextBorder = GameObject.Find("TextBorder");
 
@@ -38,35 +38,25 @@ public class DialogueTrigger : MonoBehaviour
         //nameText.SetActive(false);
     }
 
-	public void TriggerDialogue()
-	{
-		if (player.GetComponent<CharacterController2D>().enabled)
-		{
+    public void TriggerDialogue()
+    {
+        if (player.GetComponent<CharacterController2D>().enabled)
+        {
             mee = false;
             nameText.SetActive(true);
             nameText.GetComponent<TextMeshProUGUI>().enabled = true;
             nameText.GetComponent<TextMeshProUGUI>().text = dialogue.name;
             dialogueText.SetActive(true);
-			dialogueText.GetComponent<TextMeshProUGUI>().enabled = true;
-			player.GetComponent<CharacterController2D>().enabled = false;
+            dialogueText.GetComponent<TextMeshProUGUI>().enabled = true;
+            player.GetComponent<CharacterController2D>().enabled = false;
             GameObject.Find("DialogueManager").GetComponent<DialogueManager>().StartDialogue(dialogue);
-        }
-	}
-
-	private void OnTriggerEnter2D(Collider2D collision)
-	{
-        if (collision.gameObject.name == "Player" && collision.GetComponent<CharacterController2D>().enabled)
-        {
-            mee = true;
-            collision.GetComponent<CharacterController2D>().canTalk = true;
-            interactText.text = "PRESS \"E\" TO " + interactMessage;
-            interactText.enabled = true;
-            TextBorder.SetActive(true);
         }
     }
 
+    
 
-    private void OnTriggerExit2D(Collider2D collision)
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.name == "Player")
         {
@@ -74,22 +64,11 @@ public class DialogueTrigger : MonoBehaviour
             collision.GetComponent<CharacterController2D>().canTalk = false;
             interactText.enabled = false;
             TextBorder.SetActive(false);
+            nameText.GetComponent<TextMeshProUGUI>().text = "";
+            dialogueText.SetActive(false);
         }
     }
 
 
-	private void Update()
-	{
-        if (mee == true)
-        {
-            if (Input.GetKey(KeyCode.E) && player.GetComponent<CharacterController2D>().canTalk)
-            {
-                player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-                TriggerDialogue();
-                interactText.enabled = false;
-                player.GetComponent<CharacterController2D>().canTalk = false;
-                player.GetComponent<CharacterController2D>().enabled = false;
-            }
-        }
-    }
+   
 }

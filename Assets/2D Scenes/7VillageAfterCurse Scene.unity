@@ -7759,7 +7759,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1666485640}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -425, y: -323, z: -78}
+  m_LocalPosition: {x: -133, y: -323, z: -78}
   m_LocalScale: {x: 15, y: 15, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7938,6 +7938,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactMessage: ENTER THE HOUSE
+  sceneToLoad: 0
 --- !u!61 &1730938151
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9154,6 +9155,7 @@ MonoBehaviour:
   interactText: {fileID: 19842649}
   dialogueBox: {fileID: 420613538}
   dialogueBorder: {fileID: 1889211573}
+  _audiosource: {fileID: 0}
   dialogueDelaySpeed: 0.05
 --- !u!1 &1997882356
 GameObject:

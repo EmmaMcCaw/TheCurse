@@ -12,6 +12,9 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI interactText;
     public GameObject dialogueBox;
     public GameObject dialogueBorder;
+    public AudioSource _audiosource;
+    private Dialogue dialoguee;
+    private int currentSentence;
 
     private Queue<string> sentences;
 
@@ -25,7 +28,8 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(Dialogue dialogue)
     {
         GameObject.Find("PlayerFootsteps").GetComponent<AudioSource>().Stop();
-
+        dialoguee = dialogue;
+        currentSentence = -1;
 
         //interactText.text = "";
         nameText.enabled = true;
@@ -49,10 +53,21 @@ public class DialogueManager : MonoBehaviour
             EndDialogue();
             return;
         }
-
+        if(currentSentence < dialoguee.sentences.Length)
+        {
+            currentSentence += 1;
+            _audiosource.clip = dialoguee.sentences[0].sentencesAudio[currentSentence];
+            //print(currentSentence);
+            _audiosource.Stop();
+            _audiosource.Play();
+        }
+        
+        
         string sentence = sentences.Dequeue();
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
+        // _audiosource.clip = dialoguee.sentences[sentence].sentencesAudio[sentence];
+        
     }
 
     IEnumerator TypeSentence(string sentence)
@@ -69,20 +84,43 @@ public class DialogueManager : MonoBehaviour
 
     public void EndDialogue()
     {
-        var player = GameObject.Find("Player");
-        player.SetActive(true);
 
-        player.GetComponent<CharacterController2D>().enabled = true;
 
-        //GameObject.Find("DialogueText").GetComponent<TextMeshProUGUI>().enabled = false;
-        dialogueText.GetComponent<TextMeshProUGUI>().enabled = false;
-        interactText.text = "";
-        dialogueBorder.SetActive(false);
-        //dialogueText.text = "";
-        //nameText.text = "";
-        nameText.enabled = false;
-        interactText.GetComponent<TextMeshProUGUI>().enabled = true;
-        //Debug.Log("End of conversation");
+
+            if (dialoguee.nextDialogue.Length > 0)
+            {
+                print("testfolb");
+                // if (dialoguee.nextDialogue[0].gameObject.GetComponent<DialogueTrigger>() != null)
+                {
+                    StartDialogue(dialoguee.nextDialogue[0].gameObject.GetComponent<DialogueTrigger>().dialogue);
+                }
+                // if (dialoguee.nextDialogue[0].gameObject.GetComponent<DialogueTriggerAuto>() != null)
+                //  {
+                //    StartDialogue(dialoguee.nextDialogue[0].gameObject.GetComponent<DialogueTriggerAuto>().dialogue);
+                //  }
+            }
+        
+        else
+        {
+
+
+
+            var player = GameObject.Find("Player");
+            player.SetActive(true);
+
+            player.GetComponent<CharacterController2D>().enabled = true;
+
+            //GameObject.Find("DialogueText").GetComponent<TextMeshProUGUI>().enabled = false;
+            dialogueText.GetComponent<TextMeshProUGUI>().enabled = false;
+            interactText.text = "";
+            dialogueBorder.SetActive(false);
+            //dialogueText.text = "";
+            //nameText.text = "";
+            nameText.enabled = false;
+            interactText.GetComponent<TextMeshProUGUI>().enabled = true;
+            //Debug.Log("End of conversation");
+            _audiosource.Stop();
+        }
     }
 
 
@@ -90,7 +128,7 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W))
         {
             if (dialogueText.enabled)
             {

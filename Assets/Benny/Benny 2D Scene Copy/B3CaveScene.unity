@@ -712,7 +712,59 @@ PrefabInstance:
       propertyPath: m_Name
       value: Benny
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 5546987404150027513, guid: 732d39f8ae4ef2e42bc4ed28c8eea241,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 5546987404161215877, guid: 732d39f8ae4ef2e42bc4ed28c8eea241,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5546987404161215880, guid: 732d39f8ae4ef2e42bc4ed28c8eea241,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 5546987404161215880, guid: 732d39f8ae4ef2e42bc4ed28c8eea241,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5546987404161215881, guid: 732d39f8ae4ef2e42bc4ed28c8eea241,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5546987404755280957, guid: 732d39f8ae4ef2e42bc4ed28c8eea241,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5546987404755280959, guid: 732d39f8ae4ef2e42bc4ed28c8eea241,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5546987404767255874, guid: 732d39f8ae4ef2e42bc4ed28c8eea241,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5546987404767255935, guid: 732d39f8ae4ef2e42bc4ed28c8eea241,
+        type: 3}
+      propertyPath: Priority
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 5546987404767255935, guid: 732d39f8ae4ef2e42bc4ed28c8eea241,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.129
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5546987404161215879, guid: 732d39f8ae4ef2e42bc4ed28c8eea241, type: 3}
+    - {fileID: 5546987404161215877, guid: 732d39f8ae4ef2e42bc4ed28c8eea241, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 732d39f8ae4ef2e42bc4ed28c8eea241, type: 3}
 --- !u!1 &860299925
 GameObject:
@@ -5843,13 +5895,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 4e9417699a173fb45bebf1e43f2fc7f0, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.276
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 151
+  Priority: 215
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 823.6
@@ -5962,6 +6014,36 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.31999996
+--- !u!1 &1472617963 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5546987404161215881, guid: 732d39f8ae4ef2e42bc4ed28c8eea241,
+    type: 3}
+  m_PrefabInstance: {fileID: 723512979}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1472617965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472617963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d426dcece26d5b940a3220058e4c27c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactMessage: 
+  dialogue:
+    name: REDMOND
+    nextDialogue: []
+    sentences:
+    - sentences:
+      - HOLY SHIT... THERE'S SO MUCH TREASURE HERE, HOW HAS THIS NEVER BEEN DISCOVERED?
+        IT LOOKS LIKE IT'S BEEN HERE FOR CENTURIES BY THE LOOK OF THE COINS. THIS
+        IS A GREAT DISCOVERY, I COULD MAKE MY VILLAGE THE RICHEST VILLAGE IN THIS
+        COUNTRY
+      sentencesAudio:
+      - {fileID: 8300000, guid: 5e0b5e408c862cd4dbd26a7776b8bcb4, type: 3}
 --- !u!1 &1490714192
 GameObject:
   m_ObjectHideFlags: 0
@@ -6180,6 +6262,96 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!4 &1854403518 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5546987403607223208, guid: 732d39f8ae4ef2e42bc4ed28c8eea241,
+    type: 3}
+  m_PrefabInstance: {fileID: 723512979}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1868200185
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1868200186}
+  - component: {fileID: 1868200188}
+  - component: {fileID: 1868200187}
+  m_Layer: 0
+  m_Name: Green NPC (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1868200186
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1868200185}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.4, y: -3.12, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1854403518}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1868200187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1868200185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d426dcece26d5b940a3220058e4c27c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactMessage: 
+  dialogue:
+    name: REDMOND
+    nextDialogue: []
+    sentences:
+    - sentences:
+      - 'WAIT, WHAT IS THAT ORB? I''VE NEVER SEEN ANYTHING LIKE IT BEFORE. '
+      - IF I SOLD THIS, I COULD OWN THE WHOLE COUNTRY, MY FAMILY WOULD NEVER HAVE
+        TO EAT SCRAPS EVER AGAIN.
+      - IT'S SO GLOWY. IT'S... IT'S... MY PRECIOUS.
+      sentencesAudio:
+      - {fileID: 8300000, guid: afe38cd3e1a7f964d8f93864bea41e6c, type: 3}
+      - {fileID: 8300000, guid: 3ed75080a49f63c43a411af57e6ed832, type: 3}
+      - {fileID: 8300000, guid: 2886661e540723440be2bbd98cd5df69, type: 3}
+--- !u!61 &1868200188
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1868200185}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.5}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.64}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2, y: 1.64}
+  m_EdgeRadius: 0
 --- !u!1001 &834279707710599132
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -123,6 +123,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &11313737 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5546987403607223208, guid: 732d39f8ae4ef2e42bc4ed28c8eea241,
+    type: 3}
+  m_PrefabInstance: {fileID: 1474179069}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &25502814
 GameObject:
   m_ObjectHideFlags: 0
@@ -787,6 +793,37 @@ Transform:
   m_Father: {fileID: 445159576}
   m_RootOrder: 66
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &247037937 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5546987404161215881, guid: 732d39f8ae4ef2e42bc4ed28c8eea241,
+    type: 3}
+  m_PrefabInstance: {fileID: 1474179069}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &247037940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247037937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d426dcece26d5b940a3220058e4c27c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactMessage: 
+  dialogue:
+    name: REDMOND
+    nextDialogue: []
+    sentences:
+    - sentences:
+      - WHAT HAVE I DONE?
+      - I HAVE CURSED EVERYONE. OH NO MY WIFE, MY DAUGHTER. NO NO NO. THIS IS MY
+        FAULT, I DIDN'T EVEN SEE THEM. HAYLEY, LISA, I'M SO SORRY FOR WHAT I HAVE
+        DONE
+      sentencesAudio:
+      - {fileID: 8300000, guid: 2a917a298957c1f438e0aa02a0eeb0d1, type: 3}
+      - {fileID: 8300000, guid: e0a815e5cb798534fb4b0bf5da1c01fe, type: 3}
 --- !u!1 &251853524
 GameObject:
   m_ObjectHideFlags: 0
@@ -7077,6 +7114,58 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!1 &803892099
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 803892100}
+  - component: {fileID: 803892101}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &803892100
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 803892099}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1677683536}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &803892101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 803892099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af904251fb7b79b478118143f0c4a367, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactMessage: 
+  dialogue:
+    name: ORB
+    nextDialogue: []
+    sentences:
+    - sentences:
+      - TO LIFT THE CURSE, ONE MUST SACRIFICE TO REVERSE, RED BIRD.
+      sentencesAudio:
+      - {fileID: 0}
 --- !u!1 &821936726
 GameObject:
   m_ObjectHideFlags: 0
@@ -8322,6 +8411,108 @@ Transform:
   m_Father: {fileID: 445159576}
   m_RootOrder: 50
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1126646855 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5546987404150027514, guid: 732d39f8ae4ef2e42bc4ed28c8eea241,
+    type: 3}
+  m_PrefabInstance: {fileID: 1474179069}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1126646857
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1126646855}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 3047c4bb8c8d5494da0dd726cc8e3262, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.113
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 256
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1151831494
 GameObject:
   m_ObjectHideFlags: 0
@@ -14581,6 +14772,63 @@ PrefabInstance:
       propertyPath: m_Name
       value: Benny
       objectReference: {fileID: 0}
+    - target: {fileID: 5546987404150027513, guid: 732d39f8ae4ef2e42bc4ed28c8eea241,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1228.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5546987404161215877, guid: 732d39f8ae4ef2e42bc4ed28c8eea241,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[0].sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5546987404161215877, guid: 732d39f8ae4ef2e42bc4ed28c8eea241,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[0].sentences.Array.data[0]
+      value: WHAT HAVE I DONE?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5546987404161215877, guid: 732d39f8ae4ef2e42bc4ed28c8eea241,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[0].sentences.Array.data[1]
+      value: I HAVE CURSED EVERYONE. OH NO MY WIFE, MY DAUGHTER. NO NO NO. THIS IS
+        MY FAULT, I DIDN'T EVEN SEE THEM. HAYLEY, LISA, I'M SO SORRY FOR WHAT I HAVE
+        DONE
+      objectReference: {fileID: 0}
+    - target: {fileID: 5546987404161215877, guid: 732d39f8ae4ef2e42bc4ed28c8eea241,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[0].sentencesAudio.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5546987404161215877, guid: 732d39f8ae4ef2e42bc4ed28c8eea241,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[0].sentencesAudio.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2a917a298957c1f438e0aa02a0eeb0d1, type: 3}
+    - target: {fileID: 5546987404161215877, guid: 732d39f8ae4ef2e42bc4ed28c8eea241,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[0].sentencesAudio.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: e0a815e5cb798534fb4b0bf5da1c01fe, type: 3}
+    - target: {fileID: 5546987404161215880, guid: 732d39f8ae4ef2e42bc4ed28c8eea241,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 5546987404161215880, guid: 732d39f8ae4ef2e42bc4ed28c8eea241,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 5546987404161215880, guid: 732d39f8ae4ef2e42bc4ed28c8eea241,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1224
+      objectReference: {fileID: 0}
+    - target: {fileID: 5546987404161215881, guid: 732d39f8ae4ef2e42bc4ed28c8eea241,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5546987404755280959, guid: 732d39f8ae4ef2e42bc4ed28c8eea241,
         type: 3}
       propertyPath: m_IsActive
@@ -14590,6 +14838,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5546987404788476160, guid: 732d39f8ae4ef2e42bc4ed28c8eea241,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 47.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 5546987404788476160, guid: 732d39f8ae4ef2e42bc4ed28c8eea241,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 5546987404788476160, guid: 732d39f8ae4ef2e42bc4ed28c8eea241,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1239
+      objectReference: {fileID: 0}
+    - target: {fileID: 5546987404788476161, guid: 732d39f8ae4ef2e42bc4ed28c8eea241,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5546987404788476223, guid: 732d39f8ae4ef2e42bc4ed28c8eea241,
+        type: 3}
+      propertyPath: sceneToLoad
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5546987404788476223, guid: 732d39f8ae4ef2e42bc4ed28c8eea241,
+        type: 3}
+      propertyPath: interactMessage
+      value: TURN INTO BIRD
       objectReference: {fileID: 0}
     - target: {fileID: 5546987405248584454, guid: 732d39f8ae4ef2e42bc4ed28c8eea241,
         type: 3}
@@ -14601,12 +14879,25 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5546987405369284562, guid: 732d39f8ae4ef2e42bc4ed28c8eea241,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5546987405369284567, guid: 732d39f8ae4ef2e42bc4ed28c8eea241,
         type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6915299709564618419, guid: 732d39f8ae4ef2e42bc4ed28c8eea241,
+        type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5546987404788476222, guid: 732d39f8ae4ef2e42bc4ed28c8eea241, type: 3}
+    - {fileID: 5546987404161215879, guid: 732d39f8ae4ef2e42bc4ed28c8eea241, type: 3}
+    - {fileID: 5546987404161215877, guid: 732d39f8ae4ef2e42bc4ed28c8eea241, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 732d39f8ae4ef2e42bc4ed28c8eea241, type: 3}
 --- !u!1 &1476267975
 GameObject:
@@ -19958,6 +20249,92 @@ Transform:
   m_Father: {fileID: 445159576}
   m_RootOrder: 68
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1677683535
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1677683536}
+  - component: {fileID: 1677683538}
+  - component: {fileID: 1677683537}
+  m_Layer: 0
+  m_Name: Green NPC (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1677683536
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1677683535}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 45.07, y: -2.95, z: 1224}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 803892100}
+  m_Father: {fileID: 11313737}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1677683537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1677683535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d426dcece26d5b940a3220058e4c27c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactMessage: 
+  dialogue:
+    name: REDMOND
+    nextDialogue:
+    - {fileID: 803892099}
+    sentences:
+    - sentences:
+      - NO NO NO! PLEASE NO, THIS IS ALL MY FAULT. THIS IS ALL MY FAULT. I HAVE DOOMED
+        US ALL
+      sentencesAudio:
+      - {fileID: 8300000, guid: 5644b3ef1b78cfe48bfc59bee38939f3, type: 3}
+    - sentences:
+      - TO LIFT THE CURSE, ONE MUST SACRIFICE TO REVERSE, RED BIRD.
+      sentencesAudio:
+      - {fileID: 8300000, guid: 5644b3ef1b78cfe48bfc59bee38939f3, type: 3}
+--- !u!61 &1677683538
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1677683535}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.5}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.64}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2, y: 1.64}
+  m_EdgeRadius: 0
 --- !u!1 &1752056282
 GameObject:
   m_ObjectHideFlags: 0

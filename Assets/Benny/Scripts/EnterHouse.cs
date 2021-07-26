@@ -15,7 +15,7 @@ public class EnterHouse : MonoBehaviour
 
     private TextMeshProUGUI interactText;
     private GameObject TextBorder;
-
+    public int sceneToLoad;
 
     private void Start()
 	{
@@ -31,7 +31,8 @@ public class EnterHouse : MonoBehaviour
 		{
             print("yere");
             mee = false;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            SceneManager.LoadScene(sceneToLoad);
         }
 	}
 
